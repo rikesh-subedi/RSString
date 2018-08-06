@@ -9,13 +9,30 @@
 /* Begin PBXBuildFile section */
 		AF3EB65B211807590004FCE1 /* RSString.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3EB659211807590004FCE1 /* RSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3EB662211807650004FCE1 /* RSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB661211807650004FCE1 /* RSString.swift */; };
+		AF97D75B2132DE4C00247C31 /* RSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97D75A2132DE4C00247C31 /* RSURL.swift */; };
+		AFDC15C02122B2AF0075FF3F /* RSStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC15BF2122B2AF0075FF3F /* RSStringTests.swift */; };
+		AFDC15C22122B2AF0075FF3F /* RSString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3EB656211807590004FCE1 /* RSString.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFDC15C32122B2AF0075FF3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF3EB64D211807590004FCE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3EB655211807590004FCE1;
+			remoteInfo = RSString;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF3EB656211807590004FCE1 /* RSString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3EB659211807590004FCE1 /* RSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSString.h; sourceTree = "<group>"; };
 		AF3EB65A211807590004FCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3EB661211807650004FCE1 /* RSString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSString.swift; sourceTree = "<group>"; };
+		AF97D75A2132DE4C00247C31 /* RSURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSURL.swift; sourceTree = "<group>"; };
+		AFDC15BD2122B2AF0075FF3F /* RSStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDC15BF2122B2AF0075FF3F /* RSStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSStringTests.swift; sourceTree = "<group>"; };
+		AFDC15C12122B2AF0075FF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,14 +43,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFDC15BA2122B2AF0075FF3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFDC15C22122B2AF0075FF3F /* RSString.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AF3EB64C211807590004FCE1 = {
 			isa = PBXGroup;
 			children = (
+				AF97D75A2132DE4C00247C31 /* RSURL.swift */,
 				AF3EB661211807650004FCE1 /* RSString.swift */,
 				AF3EB658211807590004FCE1 /* RSString */,
+				AFDC15BE2122B2AF0075FF3F /* RSStringTests */,
 				AF3EB657211807590004FCE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3EB656211807590004FCE1 /* RSString.framework */,
+				AFDC15BD2122B2AF0075FF3F /* RSStringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +81,15 @@
 				AF3EB65A211807590004FCE1 /* Info.plist */,
 			);
 			path = RSString;
+			sourceTree = "<group>";
+		};
+		AFDC15BE2122B2AF0075FF3F /* RSStringTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC15BF2122B2AF0075FF3F /* RSStringTests.swift */,
+				AFDC15C12122B2AF0075FF3F /* Info.plist */,
+			);
+			path = RSStringTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,18 +124,40 @@
 			productReference = AF3EB656211807590004FCE1 /* RSString.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AFDC15BC2122B2AF0075FF3F /* RSStringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFDC15C72122B2AF0075FF3F /* Build configuration list for PBXNativeTarget "RSStringTests" */;
+			buildPhases = (
+				AFDC15B92122B2AF0075FF3F /* Sources */,
+				AFDC15BA2122B2AF0075FF3F /* Frameworks */,
+				AFDC15BB2122B2AF0075FF3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFDC15C42122B2AF0075FF3F /* PBXTargetDependency */,
+			);
+			name = RSStringTests;
+			productName = RSStringTests;
+			productReference = AFDC15BD2122B2AF0075FF3F /* RSStringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		AF3EB64D211807590004FCE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = sap;
 				TargetAttributes = {
 					AF3EB655211807590004FCE1 = {
 						CreatedOnToolsVersion = 9.3.1;
 						LastSwiftMigration = 0930;
+					};
+					AFDC15BC2122B2AF0075FF3F = {
+						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
 			};
@@ -115,12 +174,20 @@
 			projectRoot = "";
 			targets = (
 				AF3EB655211807590004FCE1 /* RSString */,
+				AFDC15BC2122B2AF0075FF3F /* RSStringTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF3EB654211807590004FCE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFDC15BB2122B2AF0075FF3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -134,11 +201,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF97D75B2132DE4C00247C31 /* RSURL.swift in Sources */,
 				AF3EB662211807650004FCE1 /* RSString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFDC15B92122B2AF0075FF3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFDC15C02122B2AF0075FF3F /* RSStringTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFDC15C42122B2AF0075FF3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3EB655211807590004FCE1 /* RSString */;
+			targetProxy = AFDC15C32122B2AF0075FF3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF3EB65C211807590004FCE1 /* Debug */ = {
@@ -314,6 +398,42 @@
 			};
 			name = Release;
 		};
+		AFDC15C52122B2AF0075FF3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QN875NFQT;
+				INFOPLIST_FILE = RSStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ufo.framework.RSStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFDC15C62122B2AF0075FF3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QN875NFQT;
+				INFOPLIST_FILE = RSStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ufo.framework.RSStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +451,15 @@
 			buildConfigurations = (
 				AF3EB65F211807590004FCE1 /* Debug */,
 				AF3EB660211807590004FCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFDC15C72122B2AF0075FF3F /* Build configuration list for PBXNativeTarget "RSStringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFDC15C52122B2AF0075FF3F /* Debug */,
+				AFDC15C62122B2AF0075FF3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
